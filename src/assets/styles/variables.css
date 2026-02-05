@@ -1,0 +1,68 @@
+:root {
+  /* Couleurs principales du portfolio */
+  --nird-blue-king: #0052CC;
+  --nird-blue-electric: #0066FF;
+  --nird-violet: #6B46C1;
+  --nird-fuchsia: #D53F8C;
+  --nird-coral: #FF6B6B;
+  --nird-salmon: #FFA07A;
+  --nird-golden: #F6AD55;
+  --nird-amber: #ED8936;
+
+  --pastel-pink: #FFC0CB;  /* Rose Pastel */
+  --pastel-green: #90EE90; /* Vert Pastel */
+  --pastel-aqua: #AFEEEE;  /* Aqua Pastel (pour le texte highlighté) */
+  --dark-bg: #0d0d12;      /* Fond très sombre, mais moins noir */
+  --card-bg: rgba(255, 255, 255, 0.05); /* Fond de carte très léger */
+
+  /* brillance */
+  --glitter-color: rgba(255, 255, 255, 0.2);
+
+  /* Rose */
+  --nird-pink-pastel: #FF9AA2;
+
+  /* Vert */
+  --nird-green-mint: #9ADE9A;
+
+  /* Jaune */
+  --nird-yellow-light: #FFDDAA;
+
+  /* Marron clair */
+  --nird-brown-light: #C3B1A8;
+
+  /* Thème Dark & Neon */
+  --bg-dark: #050505;
+  --bg-card: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --neon-green: #39ff14;
+  --neon-green-dim: rgba(57, 255, 20, 0.1);
+  /* --- Couleurs Néon Rose --- */
+  --neon-pink: #FF69B4;
+  --neon-pink-dim: rgba(255, 20, 147, 0.1);
+  --border-color: #222;
+
+
+  /* Dégradés NIRD */
+  --gradient-digital: linear-gradient(135deg, var(--nird-blue-king), var(--nird-blue-electric));
+  --gradient-inclusive: linear-gradient(135deg, var(--nird-violet), var(--nird-fuchsia));
+  --gradient-responsible: linear-gradient(135deg, var(--nird-fuchsia), var(--nird-salmon));
+  --gradient-solid: linear-gradient(135deg, var(--nird-fuchsia), var(--nird-pink-pastel));
+  --gradient-sustainable: linear-gradient(135deg, var(--nird-golden), var(--nird-amber));
+  --gradient-unified: linear-gradient(135deg,
+    var(--nird-blue-electric),
+    var(--nird-violet),
+    var(--nird-coral),
+    var(--nird-golden)
+  );
+
+  --glow-color-1: rgba(144, 238, 144, 0.2); /* Vert Avertissement, très transparent */
+  --glow-color-2: rgba(255, 105, 180, 0.2); /* Rose Avertissement, très transparent */
+
+  /* Neon Glows */
+  --glow-text: 0 0 10px rgba(57, 255, 20, 0.5);
+  --glow-box: 0 0 20px rgba(57, 255, 20, 0.1);
+
+  /* Fonts */
+  --font-terminal: 'Share Tech Mono', monospace;
+}
