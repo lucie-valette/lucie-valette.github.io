@@ -53,7 +53,7 @@
             <p>
               Je suis animée par une passion pour la découverte. Qu'il s'agisse de nouvelles technos
               ou de concepts théoriques, <span class="highlight-gradient">j'aime tout apprendre et tout comprendre</span>.
-              Ma polyvalence est ma plus grande force : chaque sujet m'enthousiasme.
+              Chaque sujet m'enthousiasme.
             </p>
           </div>
         </div>

@@ -7,7 +7,7 @@
 
     <div class="container">
       <div class="header-glitch">
-        <h2 class="section-title">PROFILE PERSONNEL</h2>
+        <h2 class="section-title">PROFIL PERSONNEL</h2>
       </div>
 
       <div class="profile-card-container">
@@ -25,23 +25,23 @@
               <h4 class="bio-intro">À propos de moi</h4>
 
               <p class="bio-text">
-                Je suis actuellement étudiante en deuxième année de BUT Informatique, parcours RACDV (Réalisation d’applications : conception, développement, validation).
-                Anciennement étudiante en BUT1 Génie Biologique, je me suis rapidement rendu compte que cette voie
-                ne me correspondait pas.
+                Je suis actuellement étudiante en deuxième année de BUT Informatique à Montpellier parcours RACDV (Réalisation d’applications : conception, développement, validation).
+                Anciennement étudiante en BUT1 Génie Biologique, je me suis rapidement rendu compte que cette voie ne me correspondait pas. Cependant, cette année en biologie m’a appris la rigueur et le travail d’équipe grâce aux nombreux travaux de groupe en laboratoire, aux consignes pointilleuses. La manipulation de produits fragiles et souvent dangereux a également développé mon sérieux et ma rigueur dans le travail.
+
               </p>
 
               <p class="bio-text highlight-text">
-                Finalement, c'est en BUT Informatique que j'ai eu une véritable révélation.
-                Je me suis immédiatement passionnée pour la logique, la rigueur et la puissance de création qu'offre le développement.
-                C'est le Back-End qui m'a le plus captivée : comprendre le fonctionnement interne d'un programme,
-                structurer les données, résoudre des problèmes complexes...
+                Finalement, c'est en BUT Informatique que j'ai eu une véritable révélation. Je me suis immédiatement passionnée pour la logique, la rigueur et la puissance de création qu'offre le développement. C'est le Back-End qui m'a le plus captivée : comprendre le fonctionnement interne d'un programme, structurer les données, résoudre des problèmes complexes…
               </p>
 
               <p class="bio-text final-statement">
-                L'informatique était bien plus qu'une réorientation : c'était une évidence professionnelle.
-                Mon objectif est de poursuivre ma progression dans ce domaine passionnant.
-                Vous trouverez sur ce site mes formations, mes compétences techniques ainsi que mes projets,
-                illustrant l'alliance de mes passions et de mes ambitions.
+                J’ai effectué ma première année à l’IUT d’Arles, où le programme est axé sur l’imagerie. Ce programme étant différent de celui de Montpellier, ce changement d’IUT m’a permis de développer davantage de compétences et d’apprendre de nombreux langages de programmation, ce qui m’a apporté une réelle polyvalence dans le domaine de l’informatique. J’ai également dû faire preuve d’une grande adaptabilité, car l’environnement de travail, les langages et les méthodes pédagogiques étaient très différents, et j’ai dû m’adapter rapidement pour suivre le rythme des cours.
+                L'informatique était bien plus qu'une réorientation : c'était une évidence professionnelle. Mon objectif est de poursuivre ma progression dans ce domaine passionnant.
+                Je ne peux pas parler de moi sans évoquer la danse classique et contemporaine, à laquelle j’ai consacré seize années de ma vie. J’ai participé à des concours, des spectacles et des représentations, ce qui m’a également conduite à faire du bénévolat en dansant lors d’événements tels que la Fête de la musique ou des marchés de Noël.
+                J’ai suivi une année en sport-études à l’âge de 11 ans, durant laquelle j’étudiais par le CNED. J’ai aussi été professeure de danse classique pendant un semestre auprès de quatre classes d’enfants âgés de 3 à 12 ans. Cette expérience m’a permis d’apprendre à gérer un groupe, à faire face aux imprévus et à adapter mon discours ainsi que mon enseignement en fonction de chaque élève.
+                Toutes ces années et ces expériences m’ont appris des valeurs essentielles telles que la rigueur, la discipline, la ponctualité et la résilience.
+                Vous trouverez sur ce site mes formations, mes compétences techniques, mes projets illustrant l'alliance de mes passions et de mes ambitions, ainsi que mes projets futurs.
+
               </p>
 
               <RouterLink to="/projets" class="launch-btn-link">
