@@ -46,6 +46,12 @@ const router = createRouter({
       name: 'rpg-play',
       component: () => import('@/views/Futur.vue'),
       meta: { title: 'Projet futur' }
+    },
+    {
+      path: '/BUT',
+      name: 'but',
+      component: () => import('@/views/BUT2BILAN/homeBUT2.vue'),
+      meta: { title: 'BUT2 Bilan' }
     }
   ],
   scrollBehavior(to, from, savedPosition) {

@@ -7,14 +7,15 @@ gsap.registerPlugin(ScrollTrigger)
 
 // Données techniques
 const hardSkills = [
-  { name: 'HTML / CSS', level: '90%' },
-  { name: 'SQL', level: '85%' },
+  { name: 'HTML / CSS', level: '80%' },
+  { name: 'SQL', level: '80%' },
   { name: 'Python', level: '80%' },
   { name: 'PL / SQL', level: '80%' },
   { name: 'C++', level: '75%' },
   { name: 'Java', level: '75%' },
   { name: 'PHP', level: '70%' },
   { name: 'C', level: '60%' },
+  { name: 'Framework (Symphony, Tailwind)', level: '60%'},
   { name: 'Bash script', level: '50%' },
   { name: 'Assembleur', level: '45%' }
 ]

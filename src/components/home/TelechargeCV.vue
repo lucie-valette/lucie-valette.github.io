@@ -69,14 +69,6 @@ onMounted(() => {
   animate()
   window.addEventListener('resize', initCanvas)
 
-  // Animation d'entrée Reveal
-  gsap.to(".reveal", {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power2.out"
-  })
 })
 
 onUnmounted(() => {
@@ -98,11 +90,6 @@ onUnmounted(() => {
       </div>
 
       <div class="cv-card-wrapper reveal">
-        <div class="pillar-card"
-             :class="{ active: isActive }"
-             @mouseenter="isActive = true"
-             @mouseleave="isActive = false">
-
           <div class="pillar-content">
             <div class="cv-summary-area">
               <img src="/src/assets/animal_node.png" alt="animal" class="portrait">
@@ -128,7 +115,6 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-    </div>
   </section>
 </template>
 
@@ -152,8 +138,8 @@ onUnmounted(() => {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* --- EN-TÊTE --- */
@@ -227,14 +213,13 @@ h3 {
   letter-spacing: 1px;
 }
 
-/* --- DÉTAILS & BOUTON --- */
 .pillar-details {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
+  opacity: 1;            /* Changé de 0 à 1 */
+  transform: translateY(0); /* Changé de 10px à 0 */
+  transition: none;       /* Optionnel: enlève la transition si on veut du statique pur */
 }
 
 .pillar-card:hover .pillar-details,

@@ -62,6 +62,18 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import imageC3AC1 from '/src/assets/image_C3_AC1.png'
+import imageC3AC2 from '@/assets/image_C3_AC2.png'
+import imageC3AC3 from '@/assets/image_C3_AC3.png'
+import imageC4AC1 from '@/assets/image_C4_AC1.png'
+import imageC4AC2 from '@/assets/image_C4_AC2.png'
+import imageC4AC3 from '@/assets/image_C4_AC3.png'
+import imageC5AC1 from '@/assets/image_C5_AC1.png'
+import imageC5AC2 from '@/assets/image_C5_AC2.png'
+import imageC5AC3 from '@/assets/image_C5_AC3.png'
+import imageC5AC4 from '@/assets/image_C5_AC4.png'
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -132,20 +144,6 @@ onMounted(() => {
   initCanvas()
   animate()
   window.addEventListener('resize', initCanvas)
-
-  if (cardRef.value) {
-    gsap.from(cardRef.value, {
-      y: 50,
-      opacity: 0,
-      duration: 1.2,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: profileSection.value,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      }
-    })
-  }
 })
 
 onUnmounted(() => {
@@ -199,17 +197,22 @@ onUnmounted(() => {
   /* Retrait du text-shadow néon */
 }
 
+.container {
+  max-width: 95% !important; /* Presque toute la largeur de l'écran */
+  width: 100%;
+  margin: 0 auto;
+}
+
 .profile-card-container { display: flex; justify-content: center; padding: 1rem; }
 
 .profile-card {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1600px;
   min-height: 550px;
   background: rgba(255, 255, 255, 0.03); /* Fond propre */
   border-radius: 20px;
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  /* Retrait du box-shadow néon vert */
 }
 
 .content-wrapper {

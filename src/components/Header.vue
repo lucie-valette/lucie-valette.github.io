@@ -123,6 +123,7 @@ const menuItems = [
   { label: 'Formation', to: '/formation', key: 'formation', icon: IconGamepad },
   { label: 'Compétences', to: '/competences', key: 'competences', icon: IconUsers },
   { label: 'Projets', to: '/projets', key: 'projets', icon: IconUsers },
+  { label: 'Portfolio Apprentissage', to: '/but', key: 'but', icon: IconUsers },
   { label: 'Futur', to: '/futur', key: 'futur', icon: IconUsers }
 ]
 
