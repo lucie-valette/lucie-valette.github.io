@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
+import imageC3AC1 from '@/assets/image_C3_AC1.png'
+import imageC3AC2 from '@/assets/image_C3_AC2.png'
+import imageC3AC3 from '@/assets/image_C3_AC3.png'
+import imageC4AC1 from '@/assets/image_C4_AC1.png'
+import imageC4AC2 from '@/assets/image_C4_AC2.png'
+import imageC4AC3 from '@/assets/image_C4_AC3.png'
+import imageC5AC1 from '@/assets/image_C5_AC1.png'
+import imageC5AC2 from '@/assets/image_C5_AC2.png'
+import imageC5AC3 from '@/assets/image_C5_AC3.png'
+import imageC5AC4 from '@/assets/image_C5_AC4.png'
 
 const selectedProject = ref(null)
 const isModalOpen = ref(false)
@@ -21,8 +31,8 @@ const projects = [
           "Utiliser les protocoles UDP et TCP pour échanger des données",
           "Concevoir une architecture simple d’application communicante"
         ],
-        analyse: "FAIRE L'ANALYSE",
-        image: "/src/assets/image_C3_AC1.png"
+        analyse: "J'ai appris à concevoir des programmes en C permettant à plusieurs processus de communiquer entre eux. J'ai manipulé différents mécanismes comme les tubes, les threads et surtout les sockets, en utilisant les protocoles UDP et TCP. En implémentant un serveur UDP capable de répondre à un client, j'ai compris comment structurer une architecture d'application communicante et gérer les échanges de données en réseau.",
+        image: imageC3AC1
       },
       {
         name: "AC 2 : Utiliser des serveurs et des services réseaux virtualisés",
@@ -32,22 +42,21 @@ const projects = [
           "- un serveur de base de données\n" +
           "- un service phpMyAdmin permettant d’administrer la base de données\n" +
           "\n" +
-          "\n" +
           "Nous avons configuré ces services afin qu’ils puissent communiquer entre eux dans un environnement virtualisé.\n" +
           "Nous avons également configuré des paramètres réseau tels que :\n" +
           "- les adresses IP\n" +
           "- les masques de sous-réseau\n" +
           "- les réseaux Docker\n" +
           "\n" +
-          "\n" +
-          "Ces configurations ont été réalisées à l’aide de différentes commandes Docker et réseau dans le terminal.",
+          "Ces configurations ont été réalisées à l’aide de différentes commandes Docker et réseau dans le terminal.\n",
         skills: [
           "Déployer des services réseaux dans des conteneurs Docker",
         "Configurer et administrer des services tels qu’un serveur web ou une interface d’administration de base de données",
         "Configurer des paramètres réseau (adresses IP, masques, réseaux) dans un environnement virtualisé",
         "Utiliser des commandes système pour gérer et superviser des services virtualisés"
 ],
-        analyse: "FAIRE l'ANALYSE"
+        analyse: "Je suis désormais capable de mettre en place et d'administrer des services réseaux dans un environnement virtualisé. J'ai utilisé Docker pour créer des conteneurs isolés abritant un serveur web, une base de données ou une interface phpMyAdmin. Ce travail m'a permis de configurer des paramètres réseau précis, tels que les adresses IP et les masques de sous-réseau, afin de permettre à ces différents services de communiquer de manière fluide au sein de réseaux Docker",
+        image: imageC3AC2
       },
       {
         name: "AC 3 : Sécuriser les services et données d'un système",
@@ -60,7 +69,6 @@ const projects = [
           "- validation des données saisies dans les formulaires\n" +
           "- hachage des mots de passe\n" +
           "\n" +
-          "\n" +
           "Ces éléments permettent de limiter les erreurs et d’éviter certaines vulnérabilités lors des interactions entre l’utilisateur, l’application et la base de données.\n\n" +
         "Cette capture d’écran montre une partie du code permettant de hacher et poivrer les mots de passe des utilisateurs.\n" +
           "Le hachage consiste à transformer le mot de passe en une empreinte cryptographique, ce qui permet de ne pas stocker le mot de passe en clair dans la base de données.\n" +
@@ -70,7 +78,8 @@ const projects = [
         "Mettre en place une connexion sécurisée entre une application web et une base de données",
         "Contrôler les données envoyées par les utilisateurs dans une application web",
         "Implémenter un système d’authentification simple avec PHP"],
-        analyse: "A FAIRE"
+        analyse: "j'ai intégré la sécurité comme un élément central du système. J'ai mis en œuvre des mécanismes concrets comme la gestion des sessions, la validation des formulaires et le hachage des mots de passe avec l'ajout d'un poivre pour renforcer la protection cryptographique. Ces pratiques me permettent de limiter les vulnérabilités et d'assurer un stockage sécurisé des données sensibles au sein du système d'information.",
+        image: imageC3AC3
       }
     ],
     detailsCE : [
@@ -85,7 +94,7 @@ const projects = [
       },
       {
         name: "CE 3 En offrant une qualité de service optimale",
-        description: "L’application a été conçue de manière à permettre une interaction fluide entre l’utilisateur, le serveur et la base de données, garantissant ainsi un fonctionnement cohérent du service web."
+        description: "L’application (SAE) a été conçue de manière à permettre une interaction fluide entre l’utilisateur, le serveur et la base de données, garantissant ainsi un fonctionnement cohérent du service web."
       },
       {
         name: "CE 4 En assurant la continuité d'activité",
@@ -107,7 +116,7 @@ const projects = [
           "Nous avons notamment appris à :\n" +
           "- écrire des procédures stockées\n" +
           "- créer des fonctions\n" +
-          - "utiliser des structures de contrôle (conditions, boucles)\n" +
+          "- utiliser des structures de contrôle (conditions, boucles)\n" +
           "- manipuler des requêtes SQL dans un programme PL/SQL\n\n" +
         "Ces mécanismes permettent d’effectuer des traitements directement dans la base de données, ce qui améliore l’organisation et l’exploitation des informations.\n\n"+
         "Exemple d’une requête en PL/SQL permettant de créer une procédure pour l’affichage des notes d’un étudiant selon son numéro.",
@@ -117,7 +126,8 @@ const projects = [
           "créer des procédures et fonctions permettant d’exploiter efficacement les informations",
           "structurer les traitements de données directement au sein du système de gestion de base de données"
         ],
-        analyse: "L’utilisation de PL/SQL permet d’optimiser la gestion des données en exécutant certains traitements directement dans la base de données, ce qui améliore l’efficacité et l’organisation du système d’information."
+        analyse: "L’utilisation de PL/SQL permet d’optimiser la gestion des données en exécutant certains traitements directement dans la base de données, ce qui améliore l’efficacité et l’organisation du système d’information.",
+        image: imageC4AC1
       },
       {
         name: "AC 2 Assurer la confidentialité des données (intégrité et sécu-" +
@@ -136,7 +146,8 @@ const projects = [
           "Créer une interface interactive"
         ],
         analyse: "Cette activité m’a permis de comprendre que la confidentialité des données ne repose pas uniquement sur des aspects techniques, mais aussi sur un cadre juridique strict.\n" +
-          "Elle m’a sensibilisé à l’importance de respecter les règles liées à la protection des données personnelles lors du développement ou de l’utilisation d’un système d’information.\n"
+          "Elle m’a sensibilisé à l’importance de respecter les règles liées à la protection des données personnelles lors du développement ou de l’utilisation d’un système d’information.\n",
+        image: imageC4AC2
       },
       {
         name: "AC 3 Organiser la restitution de données à travers la program" +
@@ -160,7 +171,8 @@ const projects = [
           "développer une interface permettant à l’utilisateur d’interagir avec les données"
         ],
         analyse: "Ce projet m’a permis de comprendre l’importance de la restitution des données, notamment dans un contexte où l’utilisateur doit rapidement comprendre les informations (propositions et résultats de vote).\n" +
-          " La programmation permet de transformer des données stockées en une interface claire et exploitable."
+          " La programmation permet de transformer des données stockées en une interface claire et exploitable.",
+        image: imageC4AC3
       },
       {
         name: "AC 4 : Manipuler des données hétérogènes",
@@ -227,7 +239,8 @@ const projects = [
         "analyser les besoins d’un client dans un contexte donné",
         "m’adapter aux contraintes et aux évolutions d’un projet"],
         analyse: "Cette activité m’a permis de comprendre que la conduite de projet repose sur une organisation structurée et des processus bien définis.\n" +
-          "La méthode Scrum permet d’améliorer le système d’information en facilitant la communication, l’adaptation aux besoins du client et le suivi du projet.\n"
+          "La méthode Scrum permet d’améliorer le système d’information en facilitant la communication, l’adaptation aux besoins du client et le suivi du projet.\n",
+        image: imageC5AC1
       },
       {
         name: "AC 2 Formaliser les besoins du client et de l'utilisateur",
@@ -244,7 +257,8 @@ const projects = [
         "représenter les données et leurs relations dans un système",
         "structurer un système d’information de manière cohérente"],
         analyse: "La formalisation des besoins est une étape essentielle dans un projet informatique, car elle permet de transformer une demande parfois floue en une structure exploitable.\n" +
-          "Les modèles réalisés permettent de mieux comprendre le système et facilitent son développement.\n"
+          "Les modèles réalisés permettent de mieux comprendre le système et facilitent son développement.\n",
+        image: imageC5AC2
       },
       {
         name: "AC 3 Identifier les critères de faisabilité d'un projet informatique",
@@ -261,7 +275,8 @@ const projects = [
         "prioriser les fonctionnalités selon leur importance",
         "adapter le projet en fonction des ressources disponibles"],
         analyse: "Ce projet m’a permis de comprendre que tous les projets ne sont pas réalisables de la même manière et qu’il est important d’évaluer leur faisabilité en amont.\n" +
-          "Le rôle de Product Owner permet d’organiser les priorités et d’assurer la cohérence du projet avec les attentes du client.\n"
+          "Le rôle de Product Owner permet d’organiser les priorités et d’assurer la cohérence du projet avec les attentes du client.\n",
+        image: imageC5AC3
       },
       {
         name: "AC 4 Définir et mettre en œuvre une démarche de suivi de projet",
@@ -278,7 +293,8 @@ const projects = [
         "adapter les objectifs en fonction des contraintes",
         "collaborer efficacement avec les différents membres du groupe"],
         analyse: "Le suivi de projet est essentiel pour garantir le bon déroulement d’un projet informatique.\n" +
-          "La méthode Scrum permet d’assurer une organisation efficace, une bonne communication et une adaptation continue aux besoins du client.\n"
+          "La méthode Scrum permet d’assurer une organisation efficace, une bonne communication et une adaptation continue aux besoins du client.\n",
+        image: imageC5AC4
       }
     ],
     detailsCE: [
@@ -335,9 +351,13 @@ const closeModal = () => {
 <template>
   <section class="projects-section">
     <div class="container">
-      <div class="header-area reveal">
-        <h2 class="section-title">Portfolio d'apprentissage</h2>
-        <p class="main-description">Ceci est la description</p>
+      <div class="header-area reveal"><br><br>
+        <h2 class="section-title">Portfolio d'apprentissage</h2><br>
+        <p class="main-description">Ce portfolio d’apprentissage présente les compétences que j’ai développées au cours de mon BUT Informatique, en particulier celles qui ne seront pas approfondies en troisième année.
+
+          Il s’appuie sur des exemples concrets de projets et de travaux réalisés, tout en proposant une réflexion sur les apprentissages acquis.
+
+          L’objectif est de mettre en évidence ma progression, ainsi que ma capacité à prendre du recul sur mon travail.</p><br><br>
         <h3 class="section-subtitle">Compétences du BUT2 (non travaillé en BUT3)</h3>
       </div>
 
@@ -382,9 +402,7 @@ const closeModal = () => {
               <div class="sub-block">
                 <h4>Actions réalisées</h4>
                 <p class="pre-text">{{ ac.actions }}</p>
-                <div class="profile-photo-placeholder">
-                  <img src={{ac.image}} alt="image de l'AC" class="portrait" />
-                </div>
+                <img :src="ac.image" alt="" class="portrait" />
               </div>
 
               <div class="sub-block">
@@ -424,6 +442,14 @@ const closeModal = () => {
 .section-title { font-size: 3.5rem; color: #ffb7c5; text-transform: uppercase; margin-bottom: 10px; }
 .main-description { color: #94a3b8; font-size: 1.2rem; }
 .section-subtitle { font-size: 1.8rem; color: #9ade9a; border-bottom: 2px solid #9ade9a; margin-top: 10px; display: inline-block; }
+.portrait {
+  width: 100%;        /* prend toute la largeur du bloc texte */
+  max-width: 100%;    /* empêche de dépasser */
+  height: auto;       /* garde les proportions */
+  margin-top: 10px;
+  border-radius: 10px;
+  display: block;
+}
 
 .projects-stack { display: flex; flex-direction: column; gap: 25px; }
 .project-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; cursor: pointer; transition: 0.3s; }

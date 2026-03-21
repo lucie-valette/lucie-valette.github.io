@@ -62,16 +62,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import imageC3AC1 from '/src/assets/image_C3_AC1.png'
-import imageC3AC2 from '@/assets/image_C3_AC2.png'
-import imageC3AC3 from '@/assets/image_C3_AC3.png'
-import imageC4AC1 from '@/assets/image_C4_AC1.png'
-import imageC4AC2 from '@/assets/image_C4_AC2.png'
-import imageC4AC3 from '@/assets/image_C4_AC3.png'
-import imageC5AC1 from '@/assets/image_C5_AC1.png'
-import imageC5AC2 from '@/assets/image_C5_AC2.png'
-import imageC5AC3 from '@/assets/image_C5_AC3.png'
-import imageC5AC4 from '@/assets/image_C5_AC4.png'
 
 
 
