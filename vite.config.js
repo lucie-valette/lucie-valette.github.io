@@ -5,7 +5,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './', // IMPORTANT : permet de trouver les fichiers JS et CSS
+  base: './lucie-valette.github.io', // IMPORTANT : permet de trouver les fichiers JS et CSS
   plugins: [
     vue(),
     vueDevTools(),
