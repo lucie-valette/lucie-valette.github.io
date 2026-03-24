@@ -6,7 +6,7 @@
 
     <div class="hero__content">
       <div class="hero__text">
-        <h1 class="nird-title">Développeuse Web Full StackTESTTEST</h1>
+        <h1 class="nird-title">Développeuse Web Full Stack</h1>
         <p class="subtitle">Coder l'impossible pour réaliser l'extraordinaire.</p>
       </div>
     </div>
