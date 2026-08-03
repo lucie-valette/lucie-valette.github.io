@@ -94,7 +94,7 @@ onUnmounted(() => {
             <div class="cv-summary-area">
               <img src="/src/assets/animal_node.png" alt="animal" class="portrait">
               <h3>CV Valette Lucie</h3>
-              <p class="pillar-summary">Format: PDF • Taille: 109ko</p>
+              <p class="pillar-summary">Format: PDF • Taille: 116ko</p>
             </div>
 
             <div class="pillar-details">

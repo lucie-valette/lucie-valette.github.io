@@ -36,11 +36,11 @@
             <div class="icon-box">
               <img src="/src/assets/surprise_logo.png" alt="Logo surprise" class="card-icon-img" />
             </div>
-            <h3>Spécialisation Big Data</h3>
+            <h3>Ingénierie Cloud & DevOps</h3>
             <p>
-              Le monde des données me fascine. Je m'oriente vers le
-              <span class="highlight-green">Big Data</span> pour apprendre à structurer et valoriser
-              des volumes massifs d'informations.
+              L'automatisation et l'architecture des systèmes me passionnent. Je m'oriente vers le
+              <span class="highlight-green">Platform Engineering</span> pour concevoir des infrastructures fiables,
+              automatiser les déploiements et optimiser l'environnement de travail des développeurs.
             </p>
           </div>
 

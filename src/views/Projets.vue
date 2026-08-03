@@ -124,8 +124,10 @@ const closeModal = () => {
         <h2 class="section-title">MES PROJETS</h2>
       </div>
 
+      <p>(Cette section ne comprends pas l'ensemble mes projets)</p>
+
       <div class="projects-grid">
-        <div
+        <divss
           v-for="project in projects"
           :key="project.title"
           class="project-card reveal"
@@ -138,7 +140,7 @@ const closeModal = () => {
             <p class="desc">{{ project.shortDesc }}</p>
             <button class="more-btn">Détails du projet +</button>
           </div>
-        </div>
+        </divss>
       </div>
     </div>
 

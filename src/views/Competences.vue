@@ -5,19 +5,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Données techniques
+// Organisation purement thématique sans notion de niveau
 const hardSkills = [
-  { name: 'HTML / CSS', level: '80%' },
-  { name: 'SQL', level: '80%' },
-  { name: 'Python', level: '80%' },
-  { name: 'PL / SQL', level: '80%' },
-  { name: 'C++', level: '75%' },
-  { name: 'Java', level: '75%' },
-  { name: 'PHP', level: '70%' },
-  { name: 'C', level: '60%' },
-  { name: 'Framework (Symphony, Tailwind)', level: '60%'},
-  { name: 'Bash script', level: '50%' },
-  { name: 'Assembleur', level: '45%' }
+  {
+    category: 'Langages Web',
+    skills: ['HTML / CSS', 'PHP']
+  },
+  {
+    category: 'Langages Système & Objet',
+    skills: ['Python', 'C++', 'Java', 'C', 'Assembleur']
+  },
+  {
+    category: 'Bases de données',
+    skills: ['SQL', 'PL / SQL']
+  },
+  {
+    category: 'Frameworks & Scripts',
+    skills: ['Symfony', 'Tailwind CSS', 'Bash script']
+  }
 ]
 
 // Environnements
@@ -35,29 +40,16 @@ const softSkills = [
 ]
 
 onMounted(() => {
-  // Animation des barres de progression
-  gsap.utils.toArray('.progress-fill').forEach((bar: any) => {
-    const targetWidth = bar.getAttribute('data-width');
-    gsap.to(bar, {
-      width: targetWidth,
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: bar,
-        start: "top 95%",
-      }
-    })
-  })
-
-  // Animation d'apparition
+  // Animation d'apparition simple et épurée
   gsap.from(".reveal", {
     opacity: 0,
     y: 30,
-    duration: 1,
-    stagger: 0.15,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".skills-section",
-      start: "top 85%",
+      start: "top 80%",
     }
   })
 })
@@ -67,25 +59,27 @@ onMounted(() => {
   <section class="skills-section">
     <div class="container">
 
+      <!-- HARD SKILLS -->
       <div class="header-glitch reveal">
         <h2 class="section-title">HARD SKILLS</h2>
-        <h3 class="section-subtitle">Langages de programmation</h3>
+        <h3 class="section-subtitle">Langages de programmation & Technologies</h3>
       </div>
 
       <div class="skills-grid reveal">
-        <div v-for="skill in hardSkills" :key="skill.name" class="skill-card">
-          <div class="skill-info">
-            <span class="skill-name">{{ skill.name }}</span>
-            <span class="skill-perc">{{ skill.level }}</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" :data-width="skill.level"></div>
-          </div>
+        <div v-for="group in hardSkills" :key="group.category" class="skill-category-card">
+          <h4 class="category-title">{{ group.category }}</h4>
+          <ul class="skills-list">
+            <li v-for="skill in group.skills" :key="skill" class="skill-item">
+              <span class="bullet"></span>
+              {{ skill }}
+            </li>
+          </ul>
         </div>
       </div>
 
+      <!-- ENVIRONNEMENTS -->
       <div class="env-section reveal">
-        <h3 class="section-subtitle">Environnement de développement</h3>
+        <h3 class="section-subtitle">Environnements de développement</h3>
         <div class="envs-container">
           <div v-for="env in environments" :key="env" class="env-tag">
             {{ env }}
@@ -93,6 +87,7 @@ onMounted(() => {
         </div>
       </div>
 
+      <!-- SOFT SKILLS -->
       <div class="header-glitch reveal">
         <h2 class="section-title">SOFT SKILLS</h2>
         <div class="soft-grid">
@@ -110,7 +105,7 @@ onMounted(() => {
 <style scoped>
 .skills-section {
   padding: 100px 0;
-  background: #000000; /* Fond noir pur */
+  background: #000000;
   color: #f8fafc;
   min-height: 100vh;
 }
@@ -121,16 +116,16 @@ onMounted(() => {
   padding: 0 20px;
 }
 
-/* Titres harmonisés */
+/* Titres */
 .header-glitch {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  color: #ffb7c5; /* Rose pastel */
+  color: #ffb7c5;
   letter-spacing: 4px;
   text-shadow: 0 0 15px rgba(255, 183, 197, 0.3);
   text-transform: uppercase;
@@ -138,7 +133,7 @@ onMounted(() => {
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: #94a3b8;
   text-transform: uppercase;
@@ -146,49 +141,67 @@ onMounted(() => {
   margin-bottom: 30px;
 }
 
-/* Hard Skills Grid */
+/* Hard Skills Cards par Catégorie */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px 60px;
-  margin-bottom: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 80px;
 }
 
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.skill-category-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
 }
 
-.skill-name {
+.skill-category-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(154, 222, 154, 0.3);
+}
+
+.category-title {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
+  color: #ffb7c5;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 183, 197, 0.2);
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.skill-perc {
-  font-size: 0.9rem;
-  color: #9ade9a; /* Vert pastel */
-  font-weight: bold;
-}
-
-.progress-track {
-  height: 4px; /* Plus fin pour un look plus pro */
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%; /* Animé par GSAP */
-  background: linear-gradient(90deg, #ffb7c5, #9ade9a); /* Dégradé Rose -> Vert */
-  border-radius: 10px;
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #9ade9a;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(154, 222, 154, 0.5);
 }
 
 /* Environnement Tags */
 .env-section {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   text-align: center;
 }
 
@@ -201,9 +214,9 @@ onMounted(() => {
 
 .env-tag {
   padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(154, 222, 154, 0.2); /* Bordure verte subtile */
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(154, 222, 154, 0.2);
+  border-radius: 6px;
   color: #cbd5e1;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -211,7 +224,7 @@ onMounted(() => {
 
 .env-tag:hover {
   border-color: #9ade9a;
-  background: rgba(154, 222, 154, 0.05);
+  background: rgba(154, 222, 154, 0.08);
   transform: translateY(-2px);
 }
 
@@ -227,7 +240,7 @@ onMounted(() => {
   padding: 25px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
-  border-left: 3px solid #ffb7c5; /* Accent rose */
+  border-left: 3px solid #ffb7c5;
   text-align: left;
   transition: transform 0.3s ease;
 }
